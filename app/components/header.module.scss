@@ -2,18 +2,12 @@
   display: flex;
   background-color: lightblue;
   justify-content: center;
-  height: 15vh;
+  height: 30vh;
   .title {
     display: flex;
-    margin-top: 20px;
+    flex-direction: column;
+    margin-top: 40px;
     font-weight: bold;
-    font-size: 50px;
-  }
-  .links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    text-decoration: underline;
+    font-size: 30px;
   }
 }

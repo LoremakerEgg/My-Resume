@@ -10,7 +10,13 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.title}>
         <Link href="/" className={pathName == "/" ? "myLinkActive" : "myLink"}>
-          Test link
+          Home
+        </Link>
+        <Link
+          href="./resume"
+          className={pathName == "/resume" ? "myLinkActive" : "myLink"}
+        >
+          Create Resume
         </Link>
       </div>
     </header>
