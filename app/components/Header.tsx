@@ -10,14 +10,14 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.title}>
         <Link href="/" className={pathName == "/" ? "myLinkActive" : "myLink"}>
-          Home
+          My Resume
         </Link>
-        <Link
+        {/* <Link
           href="./resume"
           className={pathName == "/resume" ? "myLinkActive" : "myLink"}
         >
           Create Resume
-        </Link>
+        </Link> */}
       </div>
     </header>
   );

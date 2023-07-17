@@ -6,7 +6,7 @@
   text-decoration: underline;
 }
 .myLinkActive {
-  color: grey;
+  color: #edf4ed;
   pointer-events: none;
   text-decoration: none;
 }

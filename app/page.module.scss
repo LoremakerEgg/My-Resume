@@ -1,12 +1,98 @@
-.textDiv {
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-  margin: 30px;
-}
 .mainContent {
   display: flex;
-}
-.imageDiv {
-  margin: 30px;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: #edf4ed;
+  .firstSection {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    .textDiv {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      margin: 30px;
+      .titles {
+        margin-bottom: 15px;
+        padding: 5px;
+        color: #79b791;
+      }
+      .textContent {
+        padding: 5px;
+      }
+      .linkContent {
+        padding: 5px;
+        width: 90px;
+        color: #6b242c;
+      }
+    }
+    .imageDiv {
+      margin-top: 60px;
+      margin-right: 90px;
+      .figcaptionContent {
+        color: gray;
+      }
+    }
+  }
+  .secondSection {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    .imageDiv {
+      margin: 30px;
+      .figcaptionContent {
+        color: gray;
+      }
+    }
+    .textDiv {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      margin: 30px;
+      .titles {
+        margin-bottom: 15px;
+        padding: 5px;
+        color: #79b791;
+      }
+      .textContent {
+        padding: 5px;
+      }
+      .linkContent {
+        padding: 5px;
+        width: 100px;
+        color: #6b242c;
+      }
+    }
+  }
+  .thirdSection {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    .textDiv {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      margin: 30px;
+      .titles {
+        margin-bottom: 15px;
+        padding: 5px;
+        color: #79b791;
+      }
+      .textContent {
+        padding: 5px;
+      }
+      .linkContent {
+        padding: 5px;
+        width: 130px;
+        color: #6b242c;
+      }
+    }
+    .imageDiv {
+      margin-top: 60px;
+      margin-right: 90px;
+      .figcaptionContent {
+        color: gray;
+      }
+    }
+  }
 }

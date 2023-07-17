@@ -1,13 +1,13 @@
 .header {
   display: flex;
-  background-color: lightblue;
+  background-color: #abd1b5;
   justify-content: center;
-  height: 30vh;
+  height: 150px;
   .title {
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    margin-top: 50px;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
   }
 }
