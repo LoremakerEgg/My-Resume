@@ -3,11 +3,12 @@
   background-color: #abd1b5;
   justify-content: center;
   height: 150px;
+  margin: 0;
   .title {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
     font-weight: bold;
-    font-size: 40px;
+    margin-top: 55px;
+    font-size: 30px;
   }
 }
