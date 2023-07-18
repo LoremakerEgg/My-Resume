@@ -54,6 +54,7 @@ export default function Home() {
               href="https://github.com/LoremakerEgg"
               className={styles.linkContent}
               target="_blank"
+              rel="noreferrer"
             >
               My GitHub
             </Link>
@@ -71,6 +72,7 @@ export default function Home() {
               <a
                 href="https://unsplash.com/@jstrippa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
                 target="_blank"
+                rel="noreferrer"
               >
                 James Harrison
               </a>{" "}
@@ -78,6 +80,7 @@ export default function Home() {
               <a
                 href="https://unsplash.com/photos/vpOeXr5wmR4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
                 target="_blank"
+                rel="noreferrer"
               >
                 Unsplash
               </a>
@@ -117,6 +120,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/anton-koller-316159240/"
               className={styles.linkContent}
               target="_blank"
+              rel="noreferrer"
             >
               My LinkedIn
             </Link>
@@ -144,6 +148,7 @@ export default function Home() {
               href="https://pdfhost.io/v/WucwIKG0w_Resume_Anton_Koller_2023"
               className={styles.linkContent}
               target="_blank"
+              rel="noreferrer"
             >
               My Work History
             </Link>
@@ -160,6 +165,7 @@ export default function Home() {
               <a
                 href="https://unsplash.com/es/@vjgalaxy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
                 target="_blank"
+                rel="noreferrer"
               >
                 Alejandro Piñero Amerio
               </a>{" "}
@@ -167,6 +173,7 @@ export default function Home() {
               <a
                 href="https://unsplash.com/photos/LHFuqK3KywE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
                 target="_blank"
+                rel="noreferrer"
               >
                 Unsplash
               </a>
@@ -198,6 +205,7 @@ export default function Home() {
               href="https://github.com/LoremakerEgg"
               className={styles.linkContent}
               target="_blank"
+              rel="noreferrer"
             >
               My GitHub
             </Link>
@@ -215,6 +223,7 @@ export default function Home() {
               <a
                 href="https://unsplash.com/@jstrippa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
                 target="_blank"
+                rel="noreferrer"
               >
                 James Harrison
               </a>{" "}
@@ -222,6 +231,7 @@ export default function Home() {
               <a
                 href="https://unsplash.com/photos/vpOeXr5wmR4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
                 target="_blank"
+                rel="noreferrer"
               >
                 Unsplash
               </a>
@@ -250,6 +260,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/anton-koller-316159240/"
               className={styles.linkContent}
               target="_blank"
+              rel="noreferrer"
             >
               My LinkedIn
             </Link>
@@ -287,6 +298,7 @@ export default function Home() {
             <Link
               href="https://pdfhost.io/v/WucwIKG0w_Resume_Anton_Koller_2023"
               target="_blank"
+              rel="noreferrer"
               className={styles.linkContent}
             >
               My Work History
@@ -304,6 +316,7 @@ export default function Home() {
               <a
                 href="https://unsplash.com/es/@vjgalaxy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
                 target="_blank"
+                rel="noreferrer"
               >
                 Alejandro Piñero Amerio
               </a>{" "}
@@ -311,6 +324,7 @@ export default function Home() {
               <a
                 href="https://unsplash.com/photos/LHFuqK3KywE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
                 target="_blank"
+                rel="noreferrer"
               >
                 Unsplash
               </a>
