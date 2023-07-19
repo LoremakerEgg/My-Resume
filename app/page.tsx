@@ -91,8 +91,8 @@ export default function Home() {
           <div className={styles.imageDiv}>
             <Image
               width={300}
-              height={300}
-              src="/1-Anton.jpg"
+              height={200}
+              src="/Anton.jpg"
               alt="me with a headset on"
             ></Image>
             <figcaption className={styles.figcaptionContent}>
@@ -268,8 +268,8 @@ export default function Home() {
           <div className={styles.imageDiv}>
             <Image
               width={330}
-              height={300}
-              src="/1-Anton.jpg"
+              height={200}
+              src="/Anton.jpg"
               alt="me with a headset on"
             ></Image>
             <figcaption className={styles.figcaptionContent}>
