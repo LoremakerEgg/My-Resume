@@ -1,14 +1,51 @@
+@import "/app/styles/variables";
+
 .header {
   display: flex;
-  background-color: #abd1b5;
-  justify-content: center;
+  background-color: $backgroundOne;
+  justify-content: space-between;
+  align-items: center;
   height: 150px;
   margin: 0;
   .title {
     display: flex;
     flex-direction: column;
     font-weight: bold;
-    margin-top: 55px;
-    font-size: 30px;
+    margin-right: 40px;
+    font-size: 20px;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .header {
+    display: flex;
+    background-color: $backgroundOne;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    margin: 0;
+    .title {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+      margin-right: 800px;
+      font-size: 30px;
+    }
+    .menu {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+      margin-left: 20px;
+    }
+    .menu:hover {
+      background-color: $backgroundTwo;
+      transition: background-color 250ms ease-in-out;
+    }
   }
 }

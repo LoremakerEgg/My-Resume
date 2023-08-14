@@ -8,6 +8,9 @@ const Header = () => {
   const pathName = usePathname();
   return (
     <header className={styles.header}>
+      <div>
+        <img src="menu-icon.png" alt="hamburger menu" className={styles.menu} />
+      </div>
       <div className={styles.title}>
         <Link href="/" className={pathName == "/" ? "myLinkActive" : "myLink"}>
           Anton Koller's Resume

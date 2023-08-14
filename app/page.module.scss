@@ -1,5 +1,7 @@
+@import "/app/styles/variables";
+
 .mainContent {
-  background-color: #edf4ed;
+  background-color: $backgroundTwo;
   margin: 0;
   .firstSection {
     margin: 15px;
@@ -7,11 +9,11 @@
       margin-bottom: 15px;
       .titles {
         margin-bottom: 10px;
-        color: #79b791;
+        color: $backgroundOne;
       }
       .linkContent {
         width: 90px;
-        color: #6b242c;
+        color: $linkHue;
       }
     }
     .imageDiv {
@@ -26,11 +28,11 @@
       margin-bottom: 15px;
       .titles {
         margin-bottom: 10px;
-        color: #79b791;
+        color: $backgroundOne;
       }
       .linkContent {
         width: 90px;
-        color: #6b242c;
+        color: $linkHue;
       }
     }
     .imageDiv {
@@ -45,11 +47,11 @@
       margin-bottom: 15px;
       .titles {
         margin-bottom: 10px;
-        color: #79b791;
+        color: $backgroundOne;
       }
       .linkContent {
         width: 90px;
-        color: #6b242c;
+        color: $linkHue;
       }
     }
     .imageDiv {
@@ -65,7 +67,7 @@
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    background-color: #edf4ed;
+    background-color: $backgroundTwo;
     .firstSection {
       display: flex;
       justify-content: space-evenly;
@@ -78,7 +80,7 @@
         .titles {
           margin-bottom: 15px;
           padding: 5px;
-          color: #79b791;
+          color: $backgroundOne;
         }
         .textContent {
           padding: 5px;
@@ -86,7 +88,7 @@
         .linkContent {
           padding: 5px;
           width: 90px;
-          color: #6b242c;
+          color: $linkHue;
         }
       }
       .imageDiv {
@@ -115,7 +117,7 @@
         .titles {
           margin-bottom: 15px;
           padding: 5px;
-          color: #79b791;
+          color: $backgroundOne;
         }
         .textContent {
           padding: 5px;
@@ -123,7 +125,7 @@
         .linkContent {
           padding: 5px;
           width: 100px;
-          color: #6b242c;
+          color: $linkHue;
         }
       }
     }
@@ -139,7 +141,7 @@
         .titles {
           margin-bottom: 15px;
           padding: 5px;
-          color: #79b791;
+          color: $backgroundOne;
         }
         .textContent {
           padding: 5px;
@@ -147,7 +149,7 @@
         .linkContent {
           padding: 5px;
           width: 130px;
-          color: #6b242c;
+          color: $linkHue;
         }
       }
       .imageDiv {
