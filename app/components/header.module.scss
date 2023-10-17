@@ -21,18 +21,19 @@
     margin-left: 20px;
     cursor: pointer;
   }
-  .sideMenu {
-    height: 100%;
-    width: 250px !important;
-    position: fixed;
-    z-index: 1;
+  .menuContentVisible {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: larger;
+    position: absolute;
+    min-width: 30%;
+    min-height: 20%;
+    margin-top: 15px;
     background-color: $backgroundOne;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
+  }
+  .menuContentInvisible {
     display: none;
-    transition: 0.5s;
-    padding-top: 60px;
   }
 }
 
@@ -55,34 +56,27 @@
       display: flex;
       flex-direction: column;
       font-weight: bold;
-      margin-left: 20px;
+      margin-left: 75px;
+      width: 50px;
+      transition: all 250ms ease-in-out;
+    }
+    .menuContentVisible {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      padding: 10px;
+      font-size: larger;
+      position: absolute;
+      min-width: 12%;
+      min-height: 15%;
+      margin-top: 35px;
+      background-color: $backgroundOne;
+    }
+    .menuContentInvisible {
+      display: none;
     }
     .menu:hover {
-      background-color: $backgroundTwo;
-      transition: background-color 250ms ease-in-out;
-    }
-    .sideMenu {
-      height: 100%;
-      width: 250px !important;
-      position: fixed;
-      z-index: 1;
-      background-color: $backgroundOne;
-      top: 0;
-      left: 0;
-      overflow-x: hidden;
-      transition: 0.5s;
-      padding-top: 60px;
-      display: none;
-      a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        display: block;
-        transition: 0.3s;
-      }
-      a:hover {
-        color: $backgroundTwo;
-      }
+      width: 60px;
     }
   }
 }

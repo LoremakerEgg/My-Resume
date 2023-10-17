@@ -9,39 +9,45 @@ const Header = () => {
   const pathName = usePathname();
   const [sideMenuVisible, setSideMenuVisible] = useState(false);
 
-  const openSideMenu = () => {
-    console.log(sideMenuVisible);
+  const toggleSideMenu = () => {
     setSideMenuVisible(!sideMenuVisible);
   };
 
   return (
     <header className={styles.header}>
-      <div
-        className={styles.sideMenu}
-        style={{
-          width: sideMenuVisible ? "250px !important" : "0px !important",
-        }}
-      >
-        <a href="#">Test Link</a>
-      </div>
       <div>
         <img
           src="menu-icon.png"
           alt="hamburger menu"
           className={styles.menu}
-          onClick={openSideMenu}
+          onClick={toggleSideMenu}
         />
+        <div
+          className={
+            sideMenuVisible == true
+              ? styles.menuContentVisible
+              : styles.menuContentInvisible
+          }
+          onClick={toggleSideMenu}
+        >
+          <Link
+            href="/"
+            className={pathName == "/" ? "myLinkActive" : "myLink"}
+          >
+            Anton Koller's Resume
+          </Link>
+          <Link
+            href="/quasar"
+            className={pathName == "/quasar" ? "myLinkActive" : "myLink"}
+          >
+            Quasar
+          </Link>
+        </div>
       </div>
       <div className={styles.title}>
         <Link href="/" className={pathName == "/" ? "myLinkActive" : "myLink"}>
           Anton Koller's Resume
         </Link>
-        {/* <Link
-          href="./resume"
-          className={pathName == "/resume" ? "myLinkActive" : "myLink"}
-        >
-          Create Resume
-        </Link> */}
       </div>
     </header>
   );

@@ -1,0 +1,11 @@
+@import "/app/styles/variables";
+
+.mainContent {
+  background-color: $backgroundTwo;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  .titles {
+    margin: 15px;
+  }
+}
