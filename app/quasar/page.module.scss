@@ -6,6 +6,26 @@
   display: flex;
   justify-content: center;
   .titles {
-    margin: 15px;
+    margin-top: 15px;
+  }
+}
+
+.main {
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+  .number {
+    margin-left: 80px;
+    margin-bottom: 20px;
+  }
+  .button {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    margin-left: 5px;
+    margin-bottom: 30px;
   }
 }

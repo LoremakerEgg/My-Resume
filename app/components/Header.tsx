@@ -34,7 +34,7 @@ const Header = () => {
             href="/"
             className={pathName == "/" ? "myLinkActive" : "myLink"}
           >
-            Anton Koller's Resume
+            Home
           </Link>
           <Link
             href="/quasar"
@@ -46,7 +46,7 @@ const Header = () => {
       </div>
       <div className={styles.title}>
         <Link href="/" className={pathName == "/" ? "myLinkActive" : "myLink"}>
-          Anton Koller's Resume
+          {pathName == "/" ? "Anton Koller's Resume" : "Home"}
         </Link>
       </div>
     </header>
