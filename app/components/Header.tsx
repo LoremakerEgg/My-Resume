@@ -11,7 +11,12 @@ const Header = () => {
 
   const toggleSideMenu = () => {
     setSideMenuVisible(!sideMenuVisible);
+    console.log(document);
   };
+
+  // const goHome = () => {
+  //   //implement functionality
+  // };
 
   return (
     <header className={styles.header}>
@@ -37,6 +42,12 @@ const Header = () => {
             Home
           </Link>
           <Link
+            href="/resume"
+            className={pathName == "/resume" ? "myLinkActive" : "myLink"}
+          >
+            My Resume
+          </Link>
+          <Link
             href="/quasar"
             className={pathName == "/quasar" ? "myLinkActive" : "myLink"}
           >
@@ -44,10 +55,9 @@ const Header = () => {
           </Link>
         </div>
       </div>
+      {/* <img src="home-icon.png" alt="house" className={styles.menu} /> */}
       <div className={styles.title}>
-        <Link href="/" className={pathName == "/" ? "myLinkActive" : "myLink"}>
-          {pathName == "/" ? "Anton Koller's Resume" : "Home"}
-        </Link>
+        <h3>{pathName == "/" ? "Home" : "My Projects"}</h3>
       </div>
     </header>
   );

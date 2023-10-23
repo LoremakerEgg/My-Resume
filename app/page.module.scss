@@ -1,164 +1,24 @@
 @import "/app/styles/variables";
 
-.mainContent {
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
   background-color: $backgroundTwo;
-  margin: 0;
-  .firstSection {
-    margin: 15px;
-    .textDiv {
-      margin-bottom: 15px;
-      .titles {
-        margin-bottom: 10px;
-        color: $backgroundOne;
-      }
-      .linkContent {
-        width: 90px;
-        color: $linkHue;
-      }
-    }
-    .imageDiv {
-      .figcaptionContent {
-        color: gray;
-      }
-    }
-  }
-  .secondSection {
-    margin: 15px;
-    .textDiv {
-      margin-bottom: 15px;
-      .titles {
-        margin-bottom: 10px;
-        color: $backgroundOne;
-      }
-      .linkContent {
-        width: 90px;
-        color: $linkHue;
-      }
-    }
-    .imageDiv {
-      .figcaptionContent {
-        color: gray;
-      }
-    }
-  }
-  .thirdSection {
-    margin: 15px;
-    .textDiv {
-      margin-bottom: 15px;
-      .titles {
-        margin-bottom: 10px;
-        color: $backgroundOne;
-      }
-      .linkContent {
-        width: 90px;
-        color: $linkHue;
-      }
-    }
-    .imageDiv {
-      .figcaptionContent {
-        color: gray;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 1000px) {
-  .mainContent {
+  .contentDiv {
     display: flex;
-    justify-content: space-evenly;
     flex-direction: column;
-    background-color: $backgroundTwo;
-    .firstSection {
-      display: flex;
-      justify-content: space-evenly;
-      margin-top: 50px;
-      .textDiv {
-        display: flex;
-        flex-direction: column;
-        width: 500px;
-        margin: 30px;
-        .titles {
-          margin-bottom: 15px;
-          padding: 5px;
-          color: $backgroundOne;
-        }
-        .textContent {
-          padding: 5px;
-        }
-        .linkContent {
-          padding: 5px;
-          width: 90px;
-          color: $linkHue;
-        }
-      }
-      .imageDiv {
-        margin-top: 60px;
-        margin-right: 90px;
-        .figcaptionContent {
-          color: gray;
-        }
-      }
-    }
-    .secondSection {
-      display: flex;
-      justify-content: space-evenly;
-      margin-top: 50px;
-      .imageDiv {
-        margin: 80px;
-        .figcaptionContent {
-          color: gray;
-        }
-      }
-      .textDiv {
-        display: flex;
-        flex-direction: column;
-        width: 500px;
-        margin: 30px;
-        .titles {
-          margin-bottom: 15px;
-          padding: 5px;
-          color: $backgroundOne;
-        }
-        .textContent {
-          padding: 5px;
-        }
-        .linkContent {
-          padding: 5px;
-          width: 100px;
-          color: $linkHue;
-        }
-      }
-    }
-    .thirdSection {
-      display: flex;
-      justify-content: space-evenly;
-      margin-top: 50px;
-      .textDiv {
-        display: flex;
-        flex-direction: column;
-        width: 500px;
-        margin: 30px;
-        .titles {
-          margin-bottom: 15px;
-          padding: 5px;
-          color: $backgroundOne;
-        }
-        .textContent {
-          padding: 5px;
-        }
-        .linkContent {
-          padding: 5px;
-          width: 130px;
-          color: $linkHue;
-        }
-      }
-      .imageDiv {
-        margin-top: 60px;
-        margin-right: 90px;
-        .figcaptionContent {
-          color: gray;
-        }
-      }
-    }
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+  }
+  .button {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 30px;
+    background-color: $backgroundOne;
   }
 }
