@@ -55,7 +55,11 @@ const Header = () => {
           </Link>
         </div>
       </div>
-      {/* <img src="home-icon.png" alt="house" className={styles.menu} /> */}
+      <div>
+        <Link href="/">
+          <img src="home-icon.png" alt="house" className={styles.home} />
+        </Link>
+      </div>
       <div className={styles.title}>
         <h3>{pathName == "/" ? "Home" : "My Projects"}</h3>
       </div>
