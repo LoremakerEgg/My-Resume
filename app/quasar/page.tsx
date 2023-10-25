@@ -11,6 +11,21 @@ export default function Quasar() {
   const [gameOver, setGameOver] = useState(0);
   const randomNumberStart = Math.floor(Math.random() * 2) + 1;
 
+  // const setLocalStorage = () => {
+  //   localStorage.setItem(
+  //     "credits",
+  //     JSON.stringify({
+  //       credits: Number(credits),
+  //     })
+  //   );
+  // };
+
+  // const getLocalStorage = () => {
+  //   let storedCredits = localStorage.getItem("credits");
+  //   console.log(JSON.parse(localStorage.credits.credits));
+  // };
+  // ABOVE IS NOT YET IMPLEMENTED
+
   const clickFourSeven = () => {
     const randomFourSeven = Math.floor(Math.random() * 4) + 4;
     setMainNumber(mainNumber + randomFourSeven);
@@ -23,9 +38,11 @@ export default function Quasar() {
 
   const clickPayOut = () => {
     setCredits(credits + payout);
+    // setLocalStorage();
     setMainNumber(0);
     setPayout(0);
     setStart(1);
+    // getLocalStorage();
   };
 
   useEffect(() => {
