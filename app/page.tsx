@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.contentDiv}>
-        <h3>
+        <h3 className={styles.textContent}>
           Hello! Welcome to my resume! If you are a prospective employer and
           would like to learn more about me, please press this button to go to
           my resume page, where you can read about my experiences and me as a
@@ -18,19 +18,20 @@ export default function Home() {
         </Link>
       </div>
       <div className={styles.contentDiv}>
-        <h3>
+        <h3 className={styles.textContent}>
           If you would like to see more about my skills in action or my personal
-          projects, please press one of the buttons below to explore!
+          projects, please press one of the buttons below to explore! (MORE
+          BUTTONS COMING)
         </h3>
         <Link href="/quasar">
           <button className={styles.button}>Quasar</button>
         </Link>
-        <Link href="#">
+        {/* <Link href="#">
           <button className={styles.button}>NYI</button>
         </Link>
         <Link href="#">
           <button className={styles.button}>NYI</button>
-        </Link>
+        </Link> */}
       </div>
     </main>
   );

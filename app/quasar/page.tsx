@@ -10,21 +10,16 @@ export default function Quasar() {
   const [start, setStart] = useState(1);
   const [gameOver, setGameOver] = useState(0);
   const randomNumberStart = Math.floor(Math.random() * 2) + 1;
+  const [gameState, setGameState] = useState(0);
 
-  // const setLocalStorage = () => {
-  //   localStorage.setItem(
-  //     "credits",
-  //     JSON.stringify({
-  //       credits: Number(credits),
-  //     })
-  //   );
-  // };
-
-  // const getLocalStorage = () => {
-  //   let storedCredits = localStorage.getItem("credits");
-  //   console.log(JSON.parse(localStorage.credits.credits));
-  // };
-  // ABOVE IS NOT YET IMPLEMENTED
+  const setLocalStorage = () => {
+    localStorage.setItem(
+      "credits",
+      JSON.stringify({
+        credits: Number(credits),
+      })
+    );
+  };
 
   const clickFourSeven = () => {
     const randomFourSeven = Math.floor(Math.random() * 4) + 4;
@@ -38,11 +33,9 @@ export default function Quasar() {
 
   const clickPayOut = () => {
     setCredits(credits + payout);
-    // setLocalStorage();
     setMainNumber(0);
     setPayout(0);
     setStart(1);
-    // getLocalStorage();
   };
 
   useEffect(() => {
@@ -58,6 +51,10 @@ export default function Quasar() {
       setGameOver(1);
     }
   }, [mainNumber]);
+
+  useEffect(() => {
+    setLocalStorage();
+  }, [credits]);
 
   const creditPayout = () => {
     console.log(credits);
@@ -75,15 +72,42 @@ export default function Quasar() {
     setMainNumber(randomNumberStart);
   };
 
-  // return (
-  //   <main className={styles.mainContent}>
-  //     <div>
-  //       <h1 className={styles.titles}>
-  //         This page is a work in progress. Please return at a later date!
-  //       </h1>
-  //     </div>
+  const startGame = () => {
+    setStart(1);
+    setGameState(1);
+    setCredits(200);
+  };
 
-  if (start === 1) {
+  const resumeGame = () => {
+    let storedCredits = JSON.parse(localStorage.credits) || "{}";
+    if (storedCredits.credits > 0) {
+      setCredits(storedCredits.credits);
+      setStart(1);
+      setGameState(1);
+    } else {
+      console.error("NO CREDITS IN ACCOUNT!");
+    }
+  };
+
+  if (gameState == 0) {
+    return (
+      <main className={styles.main}>
+        <div className={styles.divGame}>
+          <h1 className={styles.number}>{mainNumber}</h1>
+          <div className={styles.buttonDiv}>
+            <button onClick={startGame} className={styles.button}>
+              Start New Game!
+            </button>
+          </div>
+          <div className={styles.buttonDiv}>
+            <button onClick={resumeGame} className={styles.button}>
+              Resume Previous Game!
+            </button>
+          </div>
+        </div>
+      </main>
+    );
+  } else if (start === 1) {
     return (
       <main className={styles.main}>
         <div className={styles.divGame}>
