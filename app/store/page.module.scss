@@ -1,0 +1,14 @@
+@import "/app/styles/variables";
+
+.contentDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.text {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-left: 18px;
+}

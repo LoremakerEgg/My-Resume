@@ -26,6 +26,11 @@ export default function Home() {
         <Link href="/quasar">
           <button className={styles.button}>Quasar</button>
         </Link>
+        <Link href="/store">
+          <button className={styles.button} style={{ marginTop: "10px" }}>
+            Store
+          </button>
+        </Link>
         {/* <Link href="#">
           <button className={styles.button}>NYI</button>
         </Link>

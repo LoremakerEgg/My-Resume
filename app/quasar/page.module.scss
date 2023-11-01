@@ -16,12 +16,11 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  height: 100vh;
+  height: 150vh;
   .instructionsDiv {
     position: absolute;
-    max-width: 40%;
-    height: 40%;
-    top: 38%;
+    max-width: 80%;
+    top: 20%;
     background-color: blue;
     color: white;
     border: 3px solid black;
@@ -57,4 +56,5 @@
 #blur {
   filter: blur(8px);
   -webkit-filter: blur(8px);
+  display: none;
 }

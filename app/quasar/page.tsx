@@ -4,14 +4,21 @@ import styles from "./page.module.scss";
 import { useState, useEffect } from "react";
 
 export default function Quasar() {
-  const [mainNumber, setMainNumber] = useState(0);
-  const [payout, setPayout] = useState(0);
-  const [credits, setCredits] = useState(200);
-  const [start, setStart] = useState(1);
-  const [gameOver, setGameOver] = useState(0);
-  const randomNumberStart = Math.floor(Math.random() * 2) + 1;
-  const [gameState, setGameState] = useState(0);
-  const [hideInstructions, setHideInstructions] = useState(false);
+  let storedCredits = JSON.parse(localStorage.credits) || "{}";
+
+  const [mainNumber, setMainNumber] = useState(0); //default score at 0
+  const [payout, setPayout] = useState(0); //governs payout amount, default 0
+  const [credits, setCredits] = useState(
+    storedCredits ? storedCredits.credits : 200
+  ); //if credits exist within local storage, use value. else set to default (200)
+  const [start, setStart] = useState(1); //determines game start state for display purposes
+  const [gameOver, setGameOver] = useState(0); //game over screen if score exceeds 20
+  const [trueGameOver, setTrueGameOver] = useState(false); //a true game over that enables defeat screen when credits reach 0
+
+  const randomNumberStart = Math.floor(Math.random() * 2) + 1; //random number generator
+
+  const [gameState, setGameState] = useState(0); //game state for initilization menu (new game vs resume)
+  const [hideInstructions, setHideInstructions] = useState(false); //boolean for determining hiding or displaying instructions
 
   const setLocalStorage = () => {
     localStorage.setItem(
@@ -20,24 +27,24 @@ export default function Quasar() {
         credits: Number(credits),
       })
     );
-  };
+  }; //saves credits to local storage
 
   const clickFourSeven = () => {
     const randomFourSeven = Math.floor(Math.random() * 4) + 4;
     setMainNumber(mainNumber + randomFourSeven);
-  };
+  }; //generates random number between 4-7 and adds it to main score
 
   const clickOneEight = () => {
     const randomOneEight = Math.floor(Math.random() * 8) + 1;
     setMainNumber(mainNumber + randomOneEight);
-  };
+  }; //generates random number between 1-8 and adds it to main score
 
   const clickPayOut = () => {
     setCredits(credits + payout);
     setMainNumber(0);
     setPayout(0);
     setStart(1);
-  };
+  }; //pays you credits based on score
 
   useEffect(() => {
     if (mainNumber === 17) {
@@ -51,40 +58,35 @@ export default function Quasar() {
     } else if (mainNumber > 20) {
       setGameOver(1);
     }
-  }, [mainNumber]);
+  }, [mainNumber]); //updates payout display when mainNumber changes
 
   useEffect(() => {
     setLocalStorage();
-  }, [credits]);
+  }, [credits]); //updates local storage credits when credits update
 
   const creditPayout = () => {
     console.log(credits);
     return payout;
-  };
+  }; //gives you your payout
 
   const creditAccount = () => {
     return credits;
-  };
+  }; //gives you your credits
 
   const clickStart = () => {
     setStart(0);
     setGameOver(0);
     setCredits(credits - 200);
     setMainNumber(randomNumberStart);
-  };
+  }; //starts the game and detracts 200 credits from your account
 
   const startGame = () => {
     setStart(1);
     setGameState(1);
     setCredits(200);
-  };
-
-  const clickInstructions = () => {
-    setHideInstructions(!hideInstructions);
-  };
+  }; //new game function
 
   const resumeGame = () => {
-    let storedCredits = JSON.parse(localStorage.credits) || "{}";
     if (storedCredits.credits > 0) {
       setCredits(storedCredits.credits);
       setStart(1);
@@ -92,13 +94,16 @@ export default function Quasar() {
     } else {
       console.error("NO CREDITS IN ACCOUNT!");
     }
-  };
+  }; //resume game function, pulls your credits from local storage if they exist, else feeds error if they are 0
 
   if (gameState == 0 && hideInstructions == false) {
     return (
       <main className={styles.main}>
         <div className={styles.instructionsDiv}>
-          <h1>INSTRUCTIONS FOR QUASAR: </h1>
+          <h1>Welcome to Quasar!</h1>
+          <br />
+          <h3>Instructions: </h3>
+          <br />
           <p>
             Quasar is played by adding a random number to your score, allocated
             between set values. You have two options, either to select a random
@@ -229,6 +234,4 @@ export default function Quasar() {
       </main>
     );
   }
-  //   </main>
-  // );
 }
