@@ -17,6 +17,23 @@
   align-items: center;
   padding: 20px;
   height: 100vh;
+  .instructionsDiv {
+    position: absolute;
+    max-width: 40%;
+    height: 40%;
+    top: 38%;
+    background-color: blue;
+    color: white;
+    border: 3px solid black;
+    border-radius: 3px;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    .payoutList {
+      list-style: none;
+      padding: 20px;
+    }
+  }
   .divGame {
     display: flex;
     flex-direction: column;
@@ -35,4 +52,9 @@
     margin-left: 5px;
     margin-bottom: 5px;
   }
+}
+
+#blur {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
 }

@@ -11,6 +11,7 @@ export default function Quasar() {
   const [gameOver, setGameOver] = useState(0);
   const randomNumberStart = Math.floor(Math.random() * 2) + 1;
   const [gameState, setGameState] = useState(0);
+  const [hideInstructions, setHideInstructions] = useState(false);
 
   const setLocalStorage = () => {
     localStorage.setItem(
@@ -78,6 +79,10 @@ export default function Quasar() {
     setCredits(200);
   };
 
+  const clickInstructions = () => {
+    setHideInstructions(!hideInstructions);
+  };
+
   const resumeGame = () => {
     let storedCredits = JSON.parse(localStorage.credits) || "{}";
     if (storedCredits.credits > 0) {
@@ -89,11 +94,62 @@ export default function Quasar() {
     }
   };
 
-  if (gameState == 0) {
+  if (gameState == 0 && hideInstructions == false) {
     return (
       <main className={styles.main}>
-        <div className={styles.divGame}>
-          <h1 className={styles.number}>{mainNumber}</h1>
+        <div className={styles.instructionsDiv}>
+          <h1>INSTRUCTIONS FOR QUASAR: </h1>
+          <p>
+            Quasar is played by adding a random number to your score, allocated
+            between set values. You have two options, either to select a random
+            number between 1 and 8 or a random number between 4 and 7. The goal
+            is to get as close to 20 in your score without going over. The
+            payout for each number, starting at 17, are as follows:{" "}
+          </p>
+          <ul className={styles.payoutList}>
+            <li>17 Points: 200 Credits</li>
+            <li>18 Points: 250 Credits</li>
+            <li>19 Points: 300 Credits</li>
+            <li>20 Points: 400 Credits</li>
+          </ul>
+          <p>It costs 200 Credits to start playing the game!</p>
+          <br />
+
+          <button onClick={() => setHideInstructions(!hideInstructions)}>
+            Close Instructions
+          </button>
+          <br />
+          <br />
+          <br />
+          <p>
+            Based on the casino game Quasar from the Mass Effect series, created
+            by BioWare!
+          </p>
+        </div>
+        <div
+          className={styles.divGame}
+          id={hideInstructions == false ? styles.blur : ""}
+        >
+          <div className={styles.buttonDiv}>
+            <button onClick={startGame} className={styles.button}>
+              Start New Game!
+            </button>
+          </div>
+          <div className={styles.buttonDiv}>
+            <button onClick={resumeGame} className={styles.button}>
+              Resume Previous Game!
+            </button>
+          </div>
+        </div>
+      </main>
+    );
+  } else if (gameState == 0) {
+    return (
+      <main className={styles.main}>
+        <div
+          className={styles.divGame}
+          id={hideInstructions == false ? styles.blur : ""}
+        >
           <div className={styles.buttonDiv}>
             <button onClick={startGame} className={styles.button}>
               Start New Game!
