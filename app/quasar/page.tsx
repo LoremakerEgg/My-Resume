@@ -4,7 +4,7 @@ import styles from "./page.module.scss";
 import { useState, useEffect } from "react";
 
 export default function Quasar() {
-  let storedCredits = JSON.parse(localStorage.credits || "{}");
+  let storedCredits = JSON.parse(localStorage?.credits || "{}");
 
   const [mainNumber, setMainNumber] = useState(0); //default score at 0
   const [payout, setPayout] = useState(0); //governs payout amount, default 0
@@ -63,7 +63,9 @@ export default function Quasar() {
   }, [mainNumber]); //updates payout display when mainNumber changes
 
   useEffect(() => {
-    setLocalStorage();
+    if (localStorage) {
+      setLocalStorage();
+    }
   }, [credits]); //updates local storage credits when credits update
 
   const creditPayout = () => {
