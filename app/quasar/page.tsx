@@ -4,7 +4,7 @@ import styles from "./page.module.scss";
 import { useState, useEffect } from "react";
 
 export default function Quasar() {
-  let storedCredits = JSON.parse(localStorage.credits) || "{}";
+  let storedCredits = JSON.parse(localStorage.credits || "{}");
 
   const [mainNumber, setMainNumber] = useState(0); //default score at 0
   const [payout, setPayout] = useState(0); //governs payout amount, default 0
@@ -21,12 +21,14 @@ export default function Quasar() {
   const [hideInstructions, setHideInstructions] = useState(false); //boolean for determining hiding or displaying instructions
 
   const setLocalStorage = () => {
-    localStorage.setItem(
-      "credits",
-      JSON.stringify({
-        credits: Number(credits),
-      })
-    );
+    if (localStorage) {
+      localStorage.setItem(
+        "credits",
+        JSON.stringify({
+          credits: Number(credits),
+        })
+      );
+    }
   }; //saves credits to local storage
 
   const clickFourSeven = () => {
