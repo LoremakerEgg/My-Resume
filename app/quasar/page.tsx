@@ -4,7 +4,7 @@ import styles from "./page.module.scss";
 import { useState, useEffect } from "react";
 
 export default function Quasar() {
-  let storedCredits = JSON.parse(localStorage.credits || "{}");
+  // let storedCredits = JSON.parse(localStorage.credits || "{}");
 
   const [mainNumber, setMainNumber] = useState(0); //default score at 0
   const [payout, setPayout] = useState(0); //governs payout amount, default 0
@@ -20,14 +20,14 @@ export default function Quasar() {
   const [gameState, setGameState] = useState(0); //game state for initilization menu (new game vs resume)
   const [hideInstructions, setHideInstructions] = useState(false); //boolean for determining hiding or displaying instructions
 
-  const setLocalStorage = () => {
-    localStorage?.setItem(
-      "credits",
-      JSON.stringify({
-        credits: Number(credits),
-      })
-    );
-  }; //saves credits to local storage
+  // const setLocalStorage = () => {
+  //   localStorage?.setItem(
+  //     "credits",
+  //     JSON.stringify({
+  //       credits: Number(credits),
+  //     })
+  //   );
+  // }; //saves credits to local storage
 
   const clickFourSeven = () => {
     const randomFourSeven = Math.floor(Math.random() * 4) + 4;
@@ -62,7 +62,7 @@ export default function Quasar() {
 
   useEffect(() => {
     if (localStorage) {
-      setLocalStorage();
+      // setLocalStorage();
     }
   }, [credits]); //updates local storage credits when credits update
 
@@ -89,13 +89,13 @@ export default function Quasar() {
   }; //new game function
 
   const resumeGame = () => {
-    if (storedCredits.credits > 0) {
-      setCredits(storedCredits.credits);
-      setStart(1);
-      setGameState(1);
-    } else {
-      console.error("NO CREDITS IN ACCOUNT!");
-    }
+    // if (storedCredits.credits > 0) {
+    //   setCredits(storedCredits.credits);
+    //   setStart(1);
+    //   setGameState(1);
+    // } else {
+    //   console.error("NO CREDITS IN ACCOUNT!");
+    // }
   }; //resume game function, pulls your credits from local storage if they exist, else feeds error if they are 0
 
   if (gameState == 0 && hideInstructions == false) {
