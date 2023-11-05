@@ -101,6 +101,9 @@ const Quasar = () => {
   if (gameState == 0 && hideInstructions == false) {
     return (
       <main className={styles.main}>
+        <div>
+          <h2>QUASAR</h2>
+        </div>
         <div className={styles.instructionsDiv}>
           <h1>Welcome to Quasar!</h1>
           <br />
@@ -122,7 +125,7 @@ const Quasar = () => {
           <p>It costs 200 Credits to start playing the game!</p>
           <br />
           <button onClick={() => setHideInstructions(!hideInstructions)}>
-            Close Instructions
+            Play Game
           </button>
           <br />
           <br />
@@ -152,6 +155,9 @@ const Quasar = () => {
   } else if (gameState == 0) {
     return (
       <main className={styles.main}>
+        <div>
+          <h2>QUASAR</h2>
+        </div>
         <div
           className={styles.divGame}
           id={hideInstructions == false ? styles.blur : ""}
@@ -172,6 +178,9 @@ const Quasar = () => {
   } else if (start === 1) {
     return (
       <main className={styles.main}>
+        <div>
+          <h2>QUASAR</h2>
+        </div>
         <div className={styles.divGame}>
           <h1 className={styles.number}>{mainNumber}</h1>
           <div className={styles.buttonDiv}>
@@ -212,6 +221,9 @@ const Quasar = () => {
   } else {
     return (
       <main className={styles.main}>
+        <div>
+          <h2>QUASAR</h2>
+        </div>
         <div className={styles.divGame}>
           <h1 className={styles.number}>{mainNumber}</h1>
           <div className={styles.buttonDiv}>

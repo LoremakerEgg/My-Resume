@@ -31,12 +31,6 @@ export default function Home() {
             Store
           </button>
         </Link>
-        {/* <Link href="#">
-          <button className={styles.button}>NYI</button>
-        </Link>
-        <Link href="#">
-          <button className={styles.button}>NYI</button>
-        </Link> */}
       </div>
     </main>
   );
