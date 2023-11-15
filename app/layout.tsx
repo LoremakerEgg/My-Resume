@@ -2,7 +2,10 @@ import Header from "./components/Header";
 import "./styles/globals.scss";
 import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  weight: ["500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Anton Koller's Resume!",

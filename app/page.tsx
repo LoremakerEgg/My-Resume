@@ -1,36 +1,28 @@
 "use client";
 
+import Image from "next/image";
 import styles from "./page.module.scss";
-import Link from "next/link";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.contentDiv}>
-        <h3 className={styles.textContent}>
-          Hello! Welcome to my resume! If you are a prospective employer and
-          would like to learn more about me, please press this button to go to
-          my resume page, where you can read about my experiences and me as a
-          person!
-        </h3>
-        <Link href="/resume">
-          <button className={styles.button}>Resume</button>
-        </Link>
-      </div>
-      <div className={styles.contentDiv}>
-        <h3 className={styles.textContent}>
-          If you would like to see more about my skills in action or my personal
-          projects, please press one of the buttons below to explore! (MORE
-          BUTTONS COMING)
-        </h3>
-        <Link href="/quasar">
-          <button className={styles.button}>Quasar</button>
-        </Link>
-        <Link href="/store">
-          <button className={styles.button} style={{ marginTop: "10px" }}>
-            Store
-          </button>
-        </Link>
+      <div className={styles.introDiv}>
+        <Image
+          src="/unsplash-andy-holmes.jpg"
+          alt="a colorful view of space"
+          fill
+          className={styles.landingImage}
+        />
+        <h1 className={styles.titles}>
+          <span className={styles.textColor}>ANTON KOLLER</span>'S COMPENDIUM
+          WEBSITE
+        </h1>
+        <p className={styles.textContent}>
+          Hello, and welcome to my website where I am compiling my various
+          coding works for ease of access to be used as an example of what I can
+          do as a coder. Please check out one of the links in the header to
+          learn more about me or to check out one of my projects.
+        </p>
       </div>
     </main>
   );

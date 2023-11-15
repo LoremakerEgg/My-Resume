@@ -2,91 +2,30 @@
 
 .header {
   display: flex;
-  background-color: $backgroundOne;
-
-  align-items: center;
-  height: 150px;
+  background-color: $headerColor;
+  height: 60px;
   margin: 0;
   .title {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 81%;
+    gap: 25px;
     font-weight: bold;
-    margin-left: 20%;
-    font-size: 20px;
-  }
-  .menu {
-    display: flex;
-    flex-direction: column;
-    font-weight: bold;
-    margin-left: 20px;
-    cursor: pointer;
-  }
-  .home {
-    height: 50px;
-  }
-  .menuContentVisible {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    font-size: larger;
-    position: absolute;
-    min-width: 30%;
-    min-height: 20%;
+    font-size: 25px;
     margin-top: 15px;
-    background-color: $backgroundOne;
   }
-  .menuContentInvisible {
-    display: none;
+  .links {
+    text-decoration: none;
+    color: whitesmoke;
+    transition: all 0.3s ease-in-out;
   }
-}
-
-@media only screen and (min-width: 1000px) {
-  .header {
-    display: flex;
-    background-color: $backgroundOne;
-    align-items: center;
-    height: 150px;
-    margin: 0;
-    .title {
-      display: flex;
-      flex-direction: column;
-      font-weight: bold;
-      margin-left: 38%;
-      font-size: 30px;
-    }
-    .menu {
-      display: flex;
-      flex-direction: column;
-      font-weight: bold;
-      margin-left: 75px;
-      height: 50px;
-      transition: all 250ms ease-in-out;
-    }
-    .home {
-      height: 50px;
-      transition: all 250ms ease-in-out;
-    }
-    .menuContentVisible {
-      display: flex;
-      flex-direction: column;
-      border: 2px solid;
-      border-color: black;
-      align-items: center;
-      padding: 10px;
-      font-size: larger;
-      position: absolute;
-      min-width: 12%;
-      min-height: 15%;
-      margin-top: 45px;
-    }
-    .menuContentInvisible {
-      display: none;
-    }
-    .menu:hover {
-      height: 55px;
-    }
-    .home:hover {
-      height: 55px;
-    }
+  .logo {
+    margin-left: 5px;
+    height: 50px;
+    margin-top: 5px;
+  }
+  .links:hover {
+    transform: scale(1.2);
   }
 }

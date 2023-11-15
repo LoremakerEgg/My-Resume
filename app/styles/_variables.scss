@@ -1,3 +1,10 @@
-$backgroundOne: rgb(26, 102, 26);
-$backgroundTwo: #edf4ed;
+$headerColor: #083d77;
+$backgroundOne: #5fc52e;
+$backgroundTwo: linear-gradient(
+  90deg,
+  rgb(65, 83, 122) 0%,
+  hsla(220, 78%, 29%, 1) 100%
+);
 $linkHue: #6b242c;
+$savedGradientOne: #6eee87;
+$savedGradientTwo: #5fc52e;

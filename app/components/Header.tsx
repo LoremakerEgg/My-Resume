@@ -2,69 +2,54 @@
 
 import Link from "next/link";
 import styles from "./header.module.scss";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
 
 const Header = () => {
-  const pathName = usePathname();
-  const [sideMenuVisible, setSideMenuVisible] = useState(false);
-
-  const toggleSideMenu = () => {
-    setSideMenuVisible(!sideMenuVisible);
-    console.log(document);
-  };
-
-  // const goHome = () => {
-  //   //implement functionality
-  // };
-
-  return (
-    <header className={styles.header}>
-      <div>
+  if (window.innerWidth >= 1900) {
+    return (
+      <header className={styles.header}>
         <img
-          src="menu-icon.png"
-          alt="hamburger menu"
-          className={styles.menu}
-          onClick={toggleSideMenu}
+          src="favicon.ico"
+          alt="green logo of my initials, AK"
+          className={styles.logo}
         />
-        <div
-          className={
-            sideMenuVisible == true
-              ? styles.menuContentVisible
-              : styles.menuContentInvisible
-          }
-          onClick={toggleSideMenu}
-        >
-          <Link
-            href="/"
-            className={pathName == "/" ? "myLinkActive" : "myLink"}
-          >
+        <div className={styles.title}>
+          <Link href="/" className={styles.links}>
             Home
           </Link>
-          <Link
-            href="/resume"
-            className={pathName == "/resume" ? "myLinkActive" : "myLink"}
-          >
-            My Resume
+          <Link href="/resume" className={styles.links}>
+            About
           </Link>
-          <Link
-            href="/quasar"
-            className={pathName == "/quasar" ? "myLinkActive" : "myLink"}
-          >
+          <Link href="/quasar" className={styles.links}>
             Quasar
           </Link>
         </div>
-      </div>
-      <div>
-        <Link href="/">
-          <img src="home-icon.png" alt="house" className={styles.home} />
-        </Link>
-      </div>
-      <div className={styles.title}>
-        <h3>{pathName == "/" ? "Home" : "My Projects"}</h3>
-      </div>
-    </header>
-  );
+      </header>
+    );
+  } else if (window.innerWidth < 1000) {
+    return (
+      <header className={styles.header}>
+        <img
+          src="favicon.ico"
+          alt="green logo of my initials, AK"
+          className={styles.logo}
+        />
+        <div className={styles.dropdownNav}>
+          <button className={styles.dropdownButton}>Menu</button>
+          <div className={styles.dropdownContent}>
+            <Link href="/" className={styles.links}>
+              Home
+            </Link>
+            <Link href="/resume" className={styles.links}>
+              About
+            </Link>
+            <Link href="/quasar" className={styles.links}>
+              Quasar
+            </Link>
+          </div>
+        </div>
+      </header>
+    );
+  }
 };
 
 export default Header;
