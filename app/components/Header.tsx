@@ -28,6 +28,8 @@ function useWindowSize() {
 
 const Header = () => {
   const size = useWindowSize();
+  const [hidden, setHidden] = useState(true);
+
   if (size.width > 1000) {
     return (
       <header className={styles.header}>
@@ -49,7 +51,7 @@ const Header = () => {
         </div>
       </header>
     );
-  } else if (size.width < 600) {
+  } else if (size.width < 1000) {
     return (
       <header className={styles.header}>
         <img
@@ -58,8 +60,15 @@ const Header = () => {
           className={styles.logo}
         />
         <div className={styles.dropdownNav}>
-          <button className={styles.dropdownButton}>Menu</button>
-          <div className={styles.dropdownContent}>
+          <button
+            className={styles.dropdownButton}
+            onClick={() => {
+              setHidden(!hidden);
+            }}
+          >
+            <img src="/menu-icon.png" alt="hamburger menu" />
+          </button>
+          <div className={hidden ? styles.dropdownHide : styles.dropdownShow}>
             <Link href="/" className={styles.links}>
               Home
             </Link>

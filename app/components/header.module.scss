@@ -28,4 +28,32 @@
   .links:hover {
     transform: scale(1.2);
   }
+  .dropdownNav {
+    justify-content: flex-end;
+    margin-left: 68%;
+    z-index: 1;
+    .dropdownButton {
+      background-color: inherit;
+      border: none;
+      margin-top: 5px;
+      justify-self: flex-end;
+    }
+    .dropdownHide {
+      display: none;
+    }
+    .dropdownShow {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      justify-content: space-between;
+      background-color: $headerColor;
+      height: 100px;
+      position: absolute;
+      width: 150px;
+      right: 0;
+      padding: 6px 0;
+      font-size: 18px;
+      text-decoration: underline white;
+    }
+  }
 }
