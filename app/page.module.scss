@@ -3,9 +3,17 @@
 .main {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  .imageDiv {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+  }
   .introDiv {
     display: flex;
     align-items: center;
+    width: 100%;
+    height: 45%;
     .landingImage {
       margin-top: 3.7rem;
       height: 500px;
@@ -14,21 +22,34 @@
     .titles {
       font-weight: 900;
       z-index: 1;
-      max-width: 400px;
+      max-width: 600px;
       font-size: 80px;
       margin-top: 200px;
-      margin-left: 100px;
+      margin-left: 200px;
     }
     .textColor {
-      color: #5fc52e;
+      color: #558b6e;
     }
   }
-  .textContent {
-    z-index: 1;
-    font-weight: 600;
-    max-width: 400px;
-    margin-left: 800px;
-    margin-top: 200px;
-    font-size: 28px;
+  .majorTextDiv {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 100px;
+    .minorTextDiv {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .minorTitles {
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
+      .textContent {
+        width: 400px;
+        font-weight: 600;
+        font-size: 20px;
+      }
+    }
   }
 }

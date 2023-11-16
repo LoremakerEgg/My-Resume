@@ -2,7 +2,7 @@
 
 .header {
   display: flex;
-  background-color: $headerColor;
+  background-color: #558b6e;
   height: 60px;
   margin: 0;
   .title {
@@ -17,7 +17,7 @@
   }
   .links {
     text-decoration: none;
-    color: whitesmoke;
+    color: black;
     transition: all 0.3s ease-in-out;
   }
   .logo {
@@ -46,7 +46,7 @@
       flex-direction: column;
       text-align: right;
       justify-content: space-between;
-      background-color: $headerColor;
+      background-color: #558b6e;
       height: 100px;
       position: absolute;
       width: 150px;

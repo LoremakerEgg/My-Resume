@@ -1,0 +1,13 @@
+@import "/app/styles/variables";
+
+.footer {
+  display: flex;
+  background-color: #558b6e;
+  height: 50px;
+  .links {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 20px;
+  }
+}
