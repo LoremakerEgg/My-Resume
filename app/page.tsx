@@ -97,6 +97,7 @@ export default function Home() {
               <a
                 href="https://github.com/LoremakerEgg"
                 target="_blank"
+                rel="noreferrer"
                 style={{ textDecoration: "none", color: "blue" }}
               >
                 GitHub

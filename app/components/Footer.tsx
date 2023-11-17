@@ -10,6 +10,7 @@ const Footer = () => {
         <a
           href="https://www.linkedin.com/in/anton-koller-316159240/"
           target="_blank"
+          rel="noreferrer"
           style={{
             color: "blue",
             textDecoration: "none",
@@ -24,6 +25,7 @@ const Footer = () => {
         <a
           href="https://github.com/LoremakerEgg"
           target="_blank"
+          rel="noreferrer"
           style={{ color: "blue", textDecoration: "none" }}
         >
           <img src="icons8-github-30.png" alt="github icon" />
