@@ -29,7 +29,7 @@ function useWindowSize() {
 export default function Home() {
   const size = useWindowSize();
 
-  if (size.width > 1000) {
+  if (size.width > 1200) {
     return (
       <main className={styles.main}>
         <div className={styles.imageDiv}>
@@ -113,7 +113,7 @@ export default function Home() {
         </div>
       </main>
     );
-  } else if (size.width < 1000) {
+  } else if (size.width < 1200) {
     return (
       <main className={styles.mainMobile}>
         <div className={styles.imageDiv}>
@@ -133,10 +133,10 @@ export default function Home() {
         <div className={styles.arrowUp}></div>
         <figcaption
           style={{
-            marginTop: "105px",
+            marginTop: "20%",
             color: "grey",
             zIndex: "1",
-            marginLeft: "54%",
+            marginLeft: "auto",
             fontSize: "10px",
           }}
         >

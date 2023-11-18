@@ -30,7 +30,7 @@ const Header = () => {
   const size = useWindowSize();
   const [hidden, setHidden] = useState(true);
 
-  if (size.width > 1000) {
+  if (size.width > 1200) {
     return (
       <header className={styles.header}>
         <img
@@ -42,7 +42,7 @@ const Header = () => {
           <Link href="/" className={styles.links}>
             Home
           </Link>
-          <Link href="/resume" className={styles.links}>
+          <Link href="/about" className={styles.links}>
             About
           </Link>
           <Link href="/quasar" className={styles.links}>
@@ -51,7 +51,7 @@ const Header = () => {
         </div>
       </header>
     );
-  } else if (size.width < 1000) {
+  } else if (size.width < 1200) {
     return (
       <header className={styles.header}>
         <img
@@ -72,7 +72,7 @@ const Header = () => {
             <Link href="/" className={styles.links}>
               Home
             </Link>
-            <Link href="/resume" className={styles.links}>
+            <Link href="/about" className={styles.links}>
               About
             </Link>
             <Link href="/quasar" className={styles.links}>

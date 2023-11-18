@@ -60,7 +60,7 @@
     border-right: 75px solid transparent;
     border-bottom: 75px solid whitesmoke;
     margin-top: 667px;
-    margin-right: 1300px;
+    margin-right: 65%;
   }
 }
 
@@ -96,8 +96,9 @@
   .majorTextDiv {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 10%;
     justify-content: space-evenly;
+    z-index: 1;
     .minorTextDiv {
       display: flex;
       flex-direction: column;
@@ -122,6 +123,6 @@
     border-right: 45px solid transparent;
     border-bottom: 45px solid whitesmoke;
     margin-top: 320px;
-    margin-right: 200px;
+    margin-right: 60%;
   }
 }

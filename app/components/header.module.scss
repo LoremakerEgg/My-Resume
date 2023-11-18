@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 81%;
+    margin-left: auto;
     gap: 25px;
     font-weight: bold;
     font-size: 25px;
@@ -30,13 +30,17 @@
   }
   .dropdownNav {
     justify-content: flex-end;
-    margin-left: 68%;
+    margin-left: auto;
     z-index: 1;
     .dropdownButton {
       background-color: inherit;
       border: none;
       margin-top: 5px;
       justify-self: flex-end;
+      transition: all 0.3s ease-in-out;
+    }
+    .dropdownButton:hover {
+      transform: scale(1.2);
     }
     .dropdownHide {
       display: none;
