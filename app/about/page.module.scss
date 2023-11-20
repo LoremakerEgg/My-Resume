@@ -1,164 +1,36 @@
 @import "/app/styles/variables";
 
 .mainContent {
-  background: $backgroundTwo;
+  background-color: whitesmoke;
   margin: 0;
-  .firstSection {
-    margin: 15px;
-    .textDiv {
-      margin-bottom: 15px;
-      .titles {
-        margin-bottom: 10px;
-        color: $backgroundOne;
-      }
-      .linkContent {
-        width: 90px;
-        color: $linkHue;
-      }
-    }
-    .imageDiv {
-      .figcaptionContent {
-        color: gray;
-      }
-    }
-  }
-  .secondSection {
-    margin: 15px;
-    .textDiv {
-      margin-bottom: 15px;
-      .titles {
-        margin-bottom: 10px;
-        color: $backgroundOne;
-      }
-      .linkContent {
-        width: 90px;
-        color: $linkHue;
-      }
-    }
-    .imageDiv {
-      .figcaptionContent {
-        color: gray;
-      }
-    }
-  }
-  .thirdSection {
-    margin: 15px;
-    .textDiv {
-      margin-bottom: 15px;
-      .titles {
-        margin-bottom: 10px;
-        color: $backgroundOne;
-      }
-      .linkContent {
-        width: 90px;
-        color: $linkHue;
-      }
-    }
-    .imageDiv {
-      .figcaptionContent {
-        color: gray;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 1000px) {
-  .mainContent {
+  .majorContent {
     display: flex;
+    flex-wrap: wrap;
+    flex: 50%;
     justify-content: space-evenly;
-    flex-direction: column;
-    background-color: $backgroundTwo;
-    .firstSection {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .minorContent {
       display: flex;
-      justify-content: space-evenly;
-      margin-top: 50px;
-      .textDiv {
-        display: flex;
-        flex-direction: column;
-        width: 500px;
-        margin: 30px;
-        .titles {
-          margin-bottom: 15px;
-          padding: 5px;
-          color: $backgroundOne;
-        }
-        .textContent {
-          padding: 5px;
-        }
-        .linkContent {
-          padding: 5px;
-          width: 90px;
-          color: $linkHue;
-        }
-      }
-      .imageDiv {
-        margin-top: 60px;
-        margin-right: 90px;
-        .figcaptionContent {
-          color: gray;
-        }
+      align-items: center;
+      .textContent {
+        width: 400px;
+        font-weight: 700;
+        font-size: 16px;
       }
     }
-    .secondSection {
-      display: flex;
-      justify-content: space-evenly;
-      margin-top: 50px;
-      .imageDiv {
-        margin: 80px;
-        .figcaptionContent {
-          color: gray;
-        }
-      }
-      .textDiv {
-        display: flex;
-        flex-direction: column;
-        width: 500px;
-        margin: 30px;
-        .titles {
-          margin-bottom: 15px;
-          padding: 5px;
-          color: $backgroundOne;
-        }
-        .textContent {
-          padding: 5px;
-        }
-        .linkContent {
-          padding: 5px;
-          width: 100px;
-          color: $linkHue;
-        }
-      }
+  }
+  .imageContent {
+    .figcaptionContent {
+      color: gray;
     }
-    .thirdSection {
-      display: flex;
-      justify-content: space-evenly;
-      margin-top: 50px;
-      .textDiv {
-        display: flex;
-        flex-direction: column;
-        width: 500px;
-        margin: 30px;
-        .titles {
-          margin-bottom: 15px;
-          padding: 5px;
-          color: $backgroundOne;
-        }
-        .textContent {
-          padding: 5px;
-        }
-        .linkContent {
-          padding: 5px;
-          width: 130px;
-          color: $linkHue;
-        }
-      }
-      .imageDiv {
-        margin-top: 60px;
-        margin-right: 90px;
-        .figcaptionContent {
-          color: gray;
-        }
-      }
-    }
+  }
+  .primaryTitles {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: 900;
+    color: #558b6e;
+    text-decoration: underline;
   }
 }

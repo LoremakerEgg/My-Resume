@@ -68,7 +68,12 @@ const Header = () => {
           >
             <img src="/menu-icon.png" alt="hamburger menu" />
           </button>
-          <div className={hidden ? styles.dropdownHide : styles.dropdownShow}>
+          <div
+            className={hidden ? styles.dropdownHide : styles.dropdownShow}
+            onClick={() => {
+              setHidden(!hidden);
+            }}
+          >
             <Link href="/" className={styles.links}>
               Home
             </Link>
