@@ -3,6 +3,7 @@
 import styles from "./quasar.module.scss";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Quasar = () => {
   let storedCredits = JSON.parse(localStorage.credits || "{}");
@@ -102,7 +103,7 @@ const Quasar = () => {
   if (gameState == 0 && hideInstructions == false) {
     return (
       <main className={styles.main}>
-        <h1>QUASAR</h1>
+        <h1 className={styles.titles}>QUASAR</h1>
         <div className={styles.instructionsDiv}>
           <h1>Welcome to Quasar!</h1>
           <br />
@@ -157,7 +158,7 @@ const Quasar = () => {
   } else if (gameState == 0) {
     return (
       <main className={styles.main}>
-        <h1>QUASAR</h1>
+        <h1 className={styles.titles}>QUASAR</h1>
         <div
           className={styles.divGame}
           id={hideInstructions == false ? styles.blur : ""}
@@ -178,7 +179,7 @@ const Quasar = () => {
   } else if (start === 1) {
     return (
       <main className={styles.main}>
-        <h1>QUASAR</h1>
+        <h1 className={styles.titles}>QUASAR</h1>
         <div className={styles.divGame}>
           <h1 className={styles.number}>{mainNumber}</h1>
           <div className={styles.buttonDiv}>
@@ -188,10 +189,12 @@ const Quasar = () => {
           </div>
         </div>
         <div>
-          <h2>Payout: {creditPayout()}</h2>
+          <h2 className={styles.infoText}>Payout: {creditPayout()}</h2>
         </div>
         <div>
-          <h1>Credits: {creditAccount()} </h1>
+          <h1 className={styles.infoText}>
+            Credits: <span style={{ color: "green" }}>{creditAccount()}</span>{" "}
+          </h1>
         </div>
         <button onClick={() => setHideInstructions(!hideInstructions)}>
           View Instructions
@@ -204,7 +207,7 @@ const Quasar = () => {
   } else if (gameOver === 1) {
     return (
       <main className={styles.main}>
-        <h1>QUASAR</h1>
+        <h1 className={styles.titles}>QUASAR</h1>
         <div className={styles.divGame}>
           <h1 className={styles.number}>
             Too high! You lose. Press below to play again.
@@ -216,17 +219,19 @@ const Quasar = () => {
           </div>
         </div>
         <div>
-          <h2>Payout: {creditPayout()}</h2>
+          <h2 className={styles.infoText}>Payout: {creditPayout()}</h2>
         </div>
         <div>
-          <h1>Credits: {creditAccount()} </h1>
+          <h1 className={styles.infoText}>
+            Credits: <span style={{ color: "green" }}>{creditAccount()}</span>{" "}
+          </h1>
         </div>
       </main>
     );
   } else {
     return (
       <main className={styles.main}>
-        <h1>QUASAR</h1>
+        <h1 className={styles.titles}>QUASAR</h1>
         <div className={styles.divGame}>
           <h1 className={styles.number}>{mainNumber}</h1>
           <div className={styles.buttonDiv}>
@@ -242,10 +247,12 @@ const Quasar = () => {
           </div>
         </div>
         <div>
-          <h2>Payout: {creditPayout()}</h2>
+          <h2 className={styles.infoText}>Payout: {creditPayout()}</h2>
         </div>
         <div>
-          <h3>Credits: {creditAccount()} </h3>
+          <h1 className={styles.infoText}>
+            Credits: <span style={{ color: "green" }}>{creditAccount()}</span>{" "}
+          </h1>
         </div>
       </main>
     );

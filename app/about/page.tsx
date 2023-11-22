@@ -19,8 +19,10 @@ export default function Home() {
             JavaScript, I am also experienced with MySQL and Git/GitHub,
             alongside the obvious CSS and HTML skills. I am currently working on
             expanding my knowledge of other JS frameworks like Angular to learn
-            more about the various applications these frameworks have. You can
-            find a link to my GitHub in the footer below!
+            more about the various applications these frameworks have. I focus
+            heavily on making my code and styling both easy to understand and
+            adaptable/responsive. You can find a link to my GitHub in the footer
+            below!
           </p>
         </div>
         <div className={styles.imageContent}>

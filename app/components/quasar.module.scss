@@ -1,22 +1,17 @@
 @import "/app/styles/variables";
 
-.mainContent {
-  background-color: $backgroundTwo;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  .titles {
-    margin-top: 15px;
-  }
-}
-
 .main {
-  background-color: lightblue;
+  background-image: url("~/public/unsplash-andy-holmes.jpg");
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
   height: 150vh;
+  .titles {
+    font-size: 40px;
+    font-weight: 900;
+    color: #558b6e;
+  }
   .instructionsDiv {
     position: absolute;
     max-width: 80%;
@@ -43,6 +38,12 @@
   }
   .number {
     margin-bottom: 20px;
+    font-size: 80px;
+    color: whitesmoke;
+  }
+  .infoText {
+    font-size: 40px;
+    color: whitesmoke;
   }
   .button {
     background-color: blue;
