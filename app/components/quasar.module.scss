@@ -12,21 +12,9 @@
     font-weight: 900;
     color: #558b6e;
   }
-  .instructionsDiv {
-    position: absolute;
-    max-width: 80%;
-    top: 18%;
-    background-color: blue;
-    color: white;
-    border: 3px solid black;
-    border-radius: 3px;
-    text-align: center;
-    font-weight: bold;
+  .payoutList {
+    list-style: none;
     padding: 20px;
-    .payoutList {
-      list-style: none;
-      padding: 20px;
-    }
   }
   .divGame {
     display: flex;
@@ -52,6 +40,7 @@
     margin-left: 5px;
     margin-bottom: 5px;
     border-radius: 5px;
+    cursor: pointer;
   }
 }
 
