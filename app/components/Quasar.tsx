@@ -2,8 +2,6 @@
 
 import styles from "./quasar.module.scss";
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
 import Overlay from "./Overlay";
 
 const Quasar = () => {
@@ -109,7 +107,7 @@ const Quasar = () => {
     }
   }; //resume game function, pulls your credits from local storage if they exist, else feeds error if they are 0
 
-  if (start === 1) {
+  if (start === 1 && credits >= 0) {
     return (
       <main className={styles.main}>
         <h1 className={styles.titles}>QUASAR</h1>
@@ -122,12 +120,26 @@ const Quasar = () => {
           </div>
         </div>
         <div>
-          <h2 className={styles.infoText}>Payout: {creditPayout()}</h2>
+          {payout >= 200 ? (
+            <h1 className={styles.infoText}>
+              Payout: <span style={{ color: "green" }}>{creditPayout()}</span>
+            </h1>
+          ) : (
+            <h1 className={styles.infoText}>
+              Payout: <span style={{ color: "red" }}>{creditPayout()}</span>
+            </h1>
+          )}
         </div>
         <div>
-          <h1 className={styles.infoText}>
-            Credits: <span style={{ color: "green" }}>{creditAccount()}</span>{" "}
-          </h1>
+          {credits < 0 ? (
+            <h1 className={styles.infoText}>
+              Credits: <span style={{ color: "red" }}>{creditAccount()}</span>
+            </h1>
+          ) : (
+            <h1 className={styles.infoText}>
+              Credits: <span style={{ color: "green" }}>{creditAccount()}</span>
+            </h1>
+          )}
         </div>
         <button
           className={styles.button}
@@ -165,13 +177,13 @@ const Quasar = () => {
         </Overlay>
       </main>
     );
-  } else if (gameState === 1) {
+  } else if (gameState === 1 && credits >= 0) {
     return (
       <main className={styles.main}>
         <h1 className={styles.titles}>QUASAR</h1>
         <div className={styles.divGame}>
           <h1 className={styles.number}>
-            {mainNumber < 20
+            {mainNumber <= 20
               ? mainNumber
               : "Too high! You lose. Press below to play again."}
           </h1>
@@ -194,12 +206,26 @@ const Quasar = () => {
           )}
         </div>
         <div>
-          <h2 className={styles.infoText}>Payout: {creditPayout()}</h2>
+          {payout >= 200 ? (
+            <h1 className={styles.infoText}>
+              Payout: <span style={{ color: "green" }}>{creditPayout()}</span>
+            </h1>
+          ) : (
+            <h1 className={styles.infoText}>
+              Payout: <span style={{ color: "red" }}>{creditPayout()}</span>
+            </h1>
+          )}
         </div>
         <div>
-          <h1 className={styles.infoText}>
-            Credits: <span style={{ color: "green" }}>{creditAccount()}</span>{" "}
-          </h1>
+          {credits <= 0 ? (
+            <h1 className={styles.infoText}>
+              Credits: <span style={{ color: "red" }}>{creditAccount()}</span>
+            </h1>
+          ) : (
+            <h1 className={styles.infoText}>
+              Credits: <span style={{ color: "green" }}>{creditAccount()}</span>
+            </h1>
+          )}
         </div>
         <button onClick={toggleOverlay} className={styles.button}>
           View Instructions
@@ -213,6 +239,48 @@ const Quasar = () => {
         >
           Return to Quasar Menu
         </button>
+        <Overlay isOpen={isOpen} onClose={toggleOverlay}>
+          <p>
+            Quasar is played by adding a random number to your score, allocated
+            between set values. You have two options, either to select a random
+            number between 1 and 8 or a random number between 4 and 7. The goal
+            is to get as close to 20 in your score without going over. The
+            payout for each number, starting at 17, are as follows:{" "}
+          </p>
+          <ul className={styles.payoutList}>
+            <li>17 Points: 200 Credits</li>
+            <li>18 Points: 250 Credits</li>
+            <li>19 Points: 300 Credits</li>
+            <li>20 Points: 400 Credits</li>
+          </ul>
+          <p>It costs 200 Credits to start playing the game!</p>
+          <br />
+          <br />
+          <p>
+            Based on the casino game Quasar from the Mass Effect series, created
+            by BioWare!
+          </p>
+        </Overlay>
+      </main>
+    );
+  } else if (credits < 0) {
+    return (
+      <main className={styles.main}>
+        <h1 className={styles.titles}>QUASAR</h1>
+        <h1 className={styles.titles} style={{ color: "red" }}>
+          Sorry, you ran out of credits! Please try again!
+        </h1>
+        <div className={styles.divGame}>
+          <button onClick={startGame} className={styles.button}>
+            Start New Game!
+          </button>
+          <button onClick={resumeGame} className={styles.button}>
+            Resume Last Game!
+          </button>
+          <button onClick={toggleOverlay} className={styles.button}>
+            View Instructions
+          </button>
+        </div>
         <Overlay isOpen={isOpen} onClose={toggleOverlay}>
           <p>
             Quasar is played by adding a random number to your score, allocated
