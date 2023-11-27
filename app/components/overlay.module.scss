@@ -1,0 +1,43 @@
+@import "/app/styles/variables";
+
+.overlayBackground {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  cursor: pointer;
+  z-index: 9;
+}
+.overlayContainer {
+  background-color: #1a47c2;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  padding: 30px;
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+  list-style: none;
+  max-width: 50%;
+  .overlayControls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .overlayClose:after {
+      display: inline-block;
+      content: "\00d7";
+    }
+    .overlayClose {
+      border: none;
+      background-color: transparent;
+      font-size: 36px;
+      cursor: pointer;
+    }
+  }
+}
