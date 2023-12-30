@@ -13,8 +13,9 @@
     .minorContent {
       display: flex;
       align-items: center;
+      margin-bottom: 15px;
       .textContent {
-        width: 400px;
+        width: 320px;
         font-weight: 700;
         font-size: 16px;
       }
@@ -23,6 +24,7 @@
   .imageContent {
     .figcaptionContent {
       color: gray;
+      max-width: 320px;
     }
   }
   .primaryTitles {

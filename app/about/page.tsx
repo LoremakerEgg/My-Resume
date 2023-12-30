@@ -27,7 +27,7 @@ export default function Home() {
         </div>
         <div className={styles.imageContent}>
           <Image
-            width={400}
+            width={320}
             height={300}
             src="/unsplash-james-harrison.jpg"
             alt="a laptop on a desk displaying code next to a small plant"
@@ -57,7 +57,7 @@ export default function Home() {
       <div className={styles.majorContent}>
         <div className={styles.imageContent}>
           <Image
-            width={400}
+            width={320}
             height={300}
             src="/Anton.jpg"
             alt="me with a headset on"
@@ -104,7 +104,7 @@ export default function Home() {
         </div>
         <div className={styles.imageContent}>
           <Image
-            width={400}
+            width={320}
             height={300}
             src="/unsplash-alejandro-pinero-amerio.jpg"
             alt="a folded swiss army knife, brown"
