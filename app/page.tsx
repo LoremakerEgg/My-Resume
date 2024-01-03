@@ -23,7 +23,7 @@ export default function Home() {
       <div className={styles.arrowUp}></div>
       <figcaption
         style={{
-          marginTop: "30px",
+          marginTop: "110px",
           color: "grey",
           marginLeft: "40%",
           zIndex: "1",

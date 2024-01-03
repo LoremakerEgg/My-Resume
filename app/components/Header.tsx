@@ -48,6 +48,13 @@ const Header = () => {
           <Link href="/quasar" className={styles.links}>
             Quasar
           </Link>
+          <Link
+            href="https://season-of-discovery-clues.vercel.app/"
+            className={styles.links}
+            target="blank"
+          >
+            Project
+          </Link>
         </div>
       </header>
     );
@@ -82,6 +89,12 @@ const Header = () => {
             </Link>
             <Link href="/quasar" className={styles.links}>
               Quasar
+            </Link>
+            <Link
+              href="https://season-of-discovery-clues.vercel.app/"
+              className={styles.links}
+            >
+              Project
             </Link>
           </div>
         </div>
